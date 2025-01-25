@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snack Time</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("1.png");
+            background-size: cover;
+            background-color: rgba(0, 0, 0, 0.5);
+            background-blend-mode: overlay;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: orange;
+            height: 80px;
+            margin-bottom: 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            margin: 0 15px;
+            transition: transform 0.3s ease;
+        }
+        .nav a:hover {
+            transform: scale(1.5);
+        }
+        .container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .produk {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .card {
+            width: 300px;
+            border: 2px solid orange;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .gambarproduk {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .deskripsi {
+            padding: 10px;
+        }
+        .deskripsi h3 {
+            margin: 10px 0;
+        }
+        .deskripsi p {
+            margin: 10px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            background-color: orange;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: darkorange;
+        }
+        .testimoni {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .testi {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .testi-card {
+            width: 250px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .testi-card:hover {
+            transform: scale(1.05);
+        }
+        .testi-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .foot {
+            text-align: center;
+            padding: 20px;
+            background-color: orange;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="nav">
+        <a href="#menu">Menu</a>
+        <a href="#deskripsi">Deskripsi</a>
+        <a href="#testimoni">Testimoni</a>
+        <a href="#alamat">Alamat</a>
+    </div>
+
+    <!-- Container -->
+    <div class="container">
+        <h1>Selamat Datang di Snack Time</h1>
+        <h2>Promo Terbatas, Pesan Sekarang!</h2>
+    </div>
+
+    <!-- Menu Section -->
+    <div id="menu" class="produk">
+        <div class="card">
+            <img class="gambarproduk" src="cireng2.jpeg" alt="Cireng isi ayam suwir">
+            <div class="deskripsi">
+                <h3>Cireng</h3>
+                <p>Cireng isi ayam suwir pedas, sangat cocok untuk camilan sore!</p>
+                <button class="btn" onclick="kalimat('Cireng')">Pesan</button>
+            </div>
+        </div>
+        <div class="card">
+            <img class="gambarproduk" src="comingsoon.png" alt="Produk segera tersedia">
+            <div class="deskripsi">
+                <h3>Gehu</h3>
+                <p>Coming Soon!</p>
+                <button class="btn" disabled>Coming Soon</button>
+            </div>
+        </div>
+        <div class="card">
+            <img class="gambarproduk" src="comingsoon.png" alt="Produk segera tersedia">
+            <div class="deskripsi">
+                <h3>Bala-Bala</h3>
+                <p>Coming Soon!</p>
+                <button class="btn" disabled>Coming Soon</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonial Section -->
+    <div id="testimoni" class="testimoni">
+        <h2>Testimoni Pelanggan</h2>
+        <div class="testi">
+            <div class="testi-card">
+                <img src="cust1.jpeg" alt="Foto pelanggan">
+                <h4>Rina</h4>
+                <p>Cirengnya enak banget, isi ayamnya mantap!</p>
+            </div>
+            <div class="testi-card">
+                <img src="cust2.jpeg" alt="Foto pelanggan">
+                <h4>Adi</h4>
+                <p>Rasanya bikin nagih, recommended banget!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="alamat" class="foot">
+        <p>Follow Us:</p>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const alamatwa = "https://wa.me/yournumber?text=";
+
+        function kalimat(productName) {
+            const nama = prompt("Masukkan Nama Anda:");
+            const kelas = prompt("Masukkan Kelas Anda:");
+            if (!nama || !kelas) {
+                alert("Nama dan Kelas harus diisi.");
+                return;
+            }
+            const kalimat = `Assalamualaikum, saya ${nama} dari kelas ${kelas}, ingin memesan ${productName}.`;
+            const pesan = `${alamatwa}${encodeURIComponent(kalimat)}`;
+            window.open(pesan, "_blank");
+        }
+    </script>
+</body>
+</html>
